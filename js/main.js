@@ -27,7 +27,7 @@ $(document).one('pageinit', function() {
 			for(var i =0; i < runs.length; i++) {
 				$('#stats').append('<li class="ui-body-inherit ui-li-static"><strong>Date:</strong>'+runs[i]["date"]+
 				' <br><strong>Distance: </strong>' +runs[i]["miles"]+'m<div class="controls">' +
-				'<a href="#edit" id=editLink" data-miles="'+runs[i]["miles"]+'" data-date="'+runs[i]["date"]+'">Edit</a> | <a href="#" id="deleteLink" data-miles="'+runs[i]["miles"]+'" data-date="'+runs[i]["date"]+'" onclick="return comfirm(\'Are You Sure?\')">Delete</a></li>')
+				'<a href="#edit" id="editLink" data-miles="'+runs[i]["miles"]+'" data-date="'+runs[i]["date"]+'">Edit</a> | <a href="#" id="deleteLink" data-miles="'+runs[i]["miles"]+'" data-date="'+runs[i]["date"]+'" onclick="return comfirm(\'Are You Sure?\')">Delete</a></li>')
 			}
 			$('#home').bind('pageinit', function() { 
 				$('#stats').listview('refresh')
@@ -35,7 +35,6 @@ $(document).one('pageinit', function() {
 		} else {
 			$('#stats').html('<p>You have no logged runs</p>')
 		}
-
 	}
 
 	/* Add a run */
@@ -102,7 +101,7 @@ $(document).one('pageinit', function() {
 	localStorage.setItem('runs', JSON.stringify(runs))
 
 	// Redirect
-	window.onlocation.href="index.html"
+	window.location.href="index.html"
 
 	return false
 }
@@ -116,7 +115,7 @@ function clearRuns() {
 function deleteRun() {
 	// Set 1s items
 	localStorage.setItem('currentMiles', $(this).data('miles'))
-	localStorage/setItem('currentDate', $(this).data('date'))
+	localStorage.setItem('currentDate', $(this).data('date'))
 
 	// Get current data
 	currentMiles = localStorage.getItem('currentMiles')

@@ -15,9 +15,9 @@
 	<body>
 	<!-- HOME -->
 		<div data-role="page" id="home">
-			<div data-role="header" data-them="b">
+			<header data-role="header" data-theme="b">
 				<h1>Miletracker</h1>
-			</div>
+			</header>
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
@@ -56,13 +56,13 @@
 			<div data-role="content">
 				<h3>Add Run</h3>
 				<form id="addForm">
-					<label for="miles">Enter Miles: </label>
+					<label for="addMiles">Enter Miles: </label>
 					<input type="text" id="addMiles">
 
 					<label for="addDate">Enter Date: </label>
 					<input type="text" data-role="date" class="date" id="addDate" data-inline="true">
 
-					<button id="submittAdd" class="ui-btn ui-btn-b ui-corder-all">Submit</button>
+					<button id="submitAdd" class="ui-btn ui-btn-b ui-corder-all">Submit</button>
 				</form>
 				</div>
 
