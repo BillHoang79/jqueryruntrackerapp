@@ -16,7 +16,7 @@ $(document).one('pageinit', function() {
 	// Clear handler
 	$('#clearRuns').on('tap', clearRuns)
 
-
+ 
 	/*Show all runs */
 	function showRuns() {
 		// get runs obj
